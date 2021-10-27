@@ -11,15 +11,15 @@ export default function Nav() {
     return (
         <Navbar>
             <Navbar.Brand href="#">KOMBUCHA</Navbar.Brand>
-            <Navbar.Collapse>
+            {/* <Navbar.Collapse>
                 <Nav>
                     <Nav.Link href="#">products</Nav.Link>
                     <Nav.Link href="#">story</Nav.Link>
                     <Nav.Link href="#">manufacturing</Nav.Link>
                     <Nav.Link href="#">packaging</Nav.Link>
                 </Nav>
-            </Navbar.Collapse>
-            {/* <div>
+            </Navbar.Collapse> */}
+            <div>
                 <ul>
                     <li>
                         <a href="#">products</a>
@@ -34,8 +34,8 @@ export default function Nav() {
                         <a href="#">packaging</a>
                     </li>
                 </ul>
-            </div> */}
-            <div className="">
+            </div>
+            <div>
                 <a href="#">
                     <FontAwesomeIcon icon={faSearch} />
                 </a>
