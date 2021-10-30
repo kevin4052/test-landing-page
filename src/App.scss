@@ -1,4 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+html,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #393939 !important;
+}
 
 .btn {
     background-color: #545268 !important;
@@ -54,7 +60,7 @@
     &-col2 {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         &-type {
             font-size: 70px;
             color: #393939;
@@ -66,6 +72,31 @@
         &-info {
             display: flex;
             justify-content: space-between;
+        }
+    }
+}
+
+.partners {
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+}
+
+.selling-points {
+    &-title {
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            text-align: center;
+            font-weight: normal;
+        }
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10% 0;
         }
     }
 }
