@@ -11,6 +11,7 @@ import Product from './components/Product';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
+import Popular from './components/Popular';
 
 const products = [
     {
@@ -51,6 +52,7 @@ function App() {
                 return (
                     <Product
                         key={name}
+                        name={name}
                         src={src}
                         alt={name}
                         description={description}
@@ -58,6 +60,7 @@ function App() {
                     />
                 );
             })}
+            <Popular />
             <Footer />
         </Container>
     );
