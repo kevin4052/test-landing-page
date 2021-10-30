@@ -10,6 +10,8 @@ body {
     background-color: #545268 !important;
     border-color: #545268 !important;
     border-radius: 0 !important;
+    width: 170px;
+    height: 50px;
 }
 .navbar {
     &-brand {
@@ -97,6 +99,32 @@ body {
             align-items: center;
             text-align: center;
             padding: 0 10% 0;
+        }
+    }
+}
+
+.footer {
+    &-socials {
+        &-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &-description {
+            padding-left: 0 !important;
+        }
+        &-icons {
+            > div {
+                padding-left: 0;
+            }
+            svg {
+                font-size: 1.5rem;
+                margin: 1rem 1rem 1rem 0;
+            }
+        }
+    }
+    &-links {
+        &-title {
+            font-weight: bold;
         }
     }
 }

@@ -12,20 +12,22 @@ export default function Footer() {
         <Row className="footer">
             <Col>
                 <Row>
-                    <Col className="footer-socials">
+                    <Col className="footer-socials" xs={{ order: 'first' }}>
                         <Row className="footer-socials-title">KOMBUCHA</Row>
-                        <Row>
-                            Sufficient particular impossible by reasonable oh
-                            expression is. Yet preference unpleasant
+                        <Row lg="3">
+                            <Col className="footer-socials-description" lg="6">
+                                Sufficient particular impossible by reasonable
+                                oh expression is. Yet preference unpleasant
+                            </Col>
                         </Row>
-                        <Row>
-                            <Col>
+                        <Row className="footer-socials-icons" xs="3">
+                            <Col xs="1">
                                 <FontAwesomeIcon icon={faFacebookSquare} />
                             </Col>
-                            <Col>
+                            <Col xs="1">
                                 <FontAwesomeIcon icon={faTwitterSquare} />
                             </Col>
-                            <Col>
+                            <Col xs="1">
                                 <FontAwesomeIcon icon={faInstagramSquare} />
                             </Col>
                         </Row>

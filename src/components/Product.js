@@ -18,9 +18,11 @@ export default function Product({ name, src, alt, description, reverse }) {
                 <Row>
                     <p>{description}</p>
                 </Row>
-                <div>
-                    <Button>BUY NOW</Button>
-                </div>
+                <Row>
+                    <div>
+                        <Button>BUY NOW</Button>
+                    </div>
+                </Row>
             </Col>
         </Row>
     );
