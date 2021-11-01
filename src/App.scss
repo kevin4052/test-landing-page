@@ -13,6 +13,22 @@ body {
     width: 170px;
     height: 50px;
 }
+
+.card {
+    flex-direction: row-reverse !important;
+    width: 450px;
+    padding: 1rem;
+    box-shadow: 4px 4px 11px lightgrey;
+    &-img {
+        width: 150px !important;
+        height: fit-content;
+    }
+    &-text {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
 .navbar {
     &-brand {
         font-size: 20px;
@@ -138,7 +154,15 @@ body {
 
 .popular {
     &-card {
-        &-product {
+        .product {
+            &-info {
+                &-name {
+                    font-size: 16px !important;
+                }
+                &description {
+                    font-size: 10px;
+                }
+            }
         }
     }
 }
@@ -166,5 +190,9 @@ body {
         &-title {
             font-weight: bold;
         }
+    }
+    &-copyright {
+        display: flex;
+        justify-content: center;
     }
 }
