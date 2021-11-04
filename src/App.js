@@ -12,7 +12,8 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Popular from './components/Popular';
-import ProductCard from './components/ProductCard';
+import Metrics from './components/Metrics';
+import Testimonials from './components/Testimonials';
 
 const products = [
     {
@@ -62,7 +63,8 @@ function App() {
                 );
             })}
             <Popular />
-            <ProductCard />
+            <Metrics />
+            <Testimonials />
             <Footer />
         </Container>
     );

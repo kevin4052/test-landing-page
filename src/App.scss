@@ -16,9 +16,13 @@ body {
 
 .card {
     flex-direction: row-reverse !important;
-    width: 450px;
+    max-width: 425px !important;
+    min-width: 400px !important;
     padding: 1rem;
     box-shadow: 4px 4px 11px lightgrey;
+    margin: 1rem 0.5rem;
+    align-items: center;
+    border: none;
     &-img {
         width: 150px !important;
         height: fit-content;
@@ -40,6 +44,7 @@ body {
         .me-auto {
             margin-right: 6vw !important;
             a {
+                margin: 0 0.7rem;
                 line-height: 3;
                 color: #393939;
                 text-decoration: none;
@@ -153,21 +158,81 @@ body {
 }
 
 .popular {
+    &-paging {
+        display: flex;
+        justify-content: flex-end;
+        &-link:hover {
+            cursor: pointer;
+        }
+    }
+    &-products {
+        padding-top: 2rem;
+        flex-wrap: nowrap !important;
+        overflow: hidden;
+
+        &-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            transition: all 0.7s ease-in-out;
+        }
+    }
+}
+
+.testimonial {
+    &-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1 {
+            font-weight: bold;
+        }
+    }
     &-card {
-        .product {
+        display: flex;
+        flex-direction: column;
+        width: 35vw !important;
+        &-head {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            margin-bottom: 1rem;
+            &-quote {
+                font-size: 65px;
+                color: #f0f0f0;
+                width: 33% !important;
+            }
             &-info {
-                &-name {
-                    font-size: 16px !important;
-                }
-                &description {
-                    font-size: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 33% !important;
+                > div {
+                    img {
+                        border-radius: 50%;
+                    }
                 }
             }
+            &-rating {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 0.7rem 0;
+                color: #ff6e51;
+            }
+        }
+        &-body {
+            text-align: center;
         }
     }
 }
 
 .footer {
+    margin-top: 5rem !important;
     &-socials {
         &-title {
             font-size: 20px;

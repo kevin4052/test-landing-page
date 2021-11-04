@@ -1,17 +1,13 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import product1 from './images/product-1.png';
 
-export default function ProductCard() {
+export default function ProductCard({ name, src, alt, description }) {
     return (
         <Card>
-            <Card.Img src={product1} />
+            <Card.Img src={src} alt={alt} />
             <Card.Body>
-                <Card.Title>Pineapple, Lychee & Hibiscus</Card.Title>
-                <Card.Text>
-                    We loved designing the entire series of labels for Singapore
-                    based Arie Kombucha.
-                </Card.Text>
+                <Card.Title>{name}</Card.Title>
+                <Card.Text>{description}</Card.Text>
                 <Button>BUY NOW</Button>
             </Card.Body>
         </Card>
