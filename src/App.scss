@@ -190,10 +190,35 @@ body {
             font-weight: bold;
         }
     }
+    &-body {
+        flex-wrap: nowrap !important;
+        overflow: hidden;
+        justify-content: center;
+    }
+    &-btn {
+        .col {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            div {
+                margin: 0.5rem;
+                padding: 1rem;
+                border-radius: 50%;
+                border: 1px solid black;
+                &:hover {
+                    cursor: pointer;
+                }
+                &:focus {
+                    background-color: blue;
+                }
+            }
+        }
+    }
     &-card {
         display: flex;
         flex-direction: column;
         width: 35vw !important;
+        margin: 1rem 1rem;
         &-head {
             display: flex;
             flex-direction: row;
