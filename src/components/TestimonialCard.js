@@ -4,9 +4,14 @@ import { faStar, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import profileIcon from './images/profile-icon.png';
 
-export default function TestimonialCard() {
+export default function TestimonialCard({ sliderTransform }) {
     return (
-        <div className="testimonial-card">
+        <div
+            className="testimonial-card"
+            style={{
+                transform: `translate3d(${sliderTransform}px, 0px, 0px)`,
+            }}
+        >
             <div className="testimonial-card-head">
                 <div className="testimonial-card-head-quote">
                     <FontAwesomeIcon icon={faQuoteLeft} />

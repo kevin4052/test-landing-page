@@ -1,18 +1,35 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import {
-    faChevronLeft,
-    faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Col, Row, Button } from 'react-bootstrap';
 import TestimonialCard from './TestimonialCard';
 
 export default function Testimonials() {
     const [sliderTransform, setSliderTransform] = React.useState(0);
+    const [position, setPosition] = React.useState(3);
 
-    const handleClick = () => {
-        setSliderTransform(0);
+    const amount = [1, 2, 3, 4, 5];
+    const testimonialList = amount.map((number) => {
+        return (
+            <TestimonialCard
+                key={number.toString()}
+                sliderTransform={sliderTransform}
+            />
+        );
+    });
+
+    const handleClick = (e) => {
+        const id = e.target.id;
+        const cardWidth =
+            document.getElementsByClassName('testimonial-card')[0].offsetWidth;
+
+        if (id === 'chevronRight' && position > 1) {
+            setPosition(position - 1);
+            setSliderTransform(sliderTransform + cardWidth * 1);
+        } else if (id === 'chevronLeft' && position < 5) {
+            setPosition(position + 1);
+            setSliderTransform(sliderTransform + cardWidth * -1);
+        }
     };
+
     return (
         <Row className="testimonial">
             <Col>
@@ -23,36 +40,26 @@ export default function Testimonials() {
                     </p>
                 </Row>
                 <Row className="testimonial-body">
-                    <TestimonialCard
-                        style={{
-                            transform: `translate3d(${sliderTransform}px, 0px, 0px)`,
-                        }}
-                    />
-                    <TestimonialCard
-                        style={{
-                            transform: `translate3d(${sliderTransform}px, 0px, 0px)`,
-                        }}
-                    />
-                    <TestimonialCard
-                        style={{
-                            transform: `translate3d(${sliderTransform}px, 0px, 0px)`,
-                        }}
-                    />
+                    {testimonialList.map((testimonial) => {
+                        return testimonial;
+                    })}
                 </Row>
                 <Row className="testimonial-btn">
                     <Col>
-                        <div>
-                            <FontAwesomeIcon
-                                icon={faChevronLeft}
-                                onClick={handleClick}
-                            />
-                        </div>
-                        <div>
-                            <FontAwesomeIcon
-                                icon={faChevronRight}
-                                onClick={handleClick}
-                            />
-                        </div>
+                        <Button
+                            id="chevronLeft"
+                            className="testimonial-btn-icon"
+                            onClick={handleClick}
+                        >
+                            {`<`}
+                        </Button>
+                        <Button
+                            id="chevronRight"
+                            className="testimonial-btn-icon"
+                            onClick={handleClick}
+                        >
+                            {`>`}
+                        </Button>
                     </Col>
                 </Row>
             </Col>

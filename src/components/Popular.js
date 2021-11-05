@@ -46,6 +46,12 @@ const products = [
 
 export default function Popular() {
     const [sliderTransform, setSliderTransform] = React.useState(0);
+    const [selected, setSelected] = React.useState('paging-1');
+
+    const selectedStyling = {
+        fontWeight: 'bold',
+        transform: 'scale(1.5)',
+    };
 
     const handlePageSelect = (e) => {
         const { id } = e.target;
@@ -60,6 +66,7 @@ export default function Popular() {
         } else if (id === 'paging-3') {
             slideOffest = 2;
         }
+        setSelected(id);
         setSliderTransform(parentWidth * slideOffest * -1);
     };
 
@@ -92,6 +99,9 @@ export default function Popular() {
                         <span
                             id="paging-1"
                             className="popular-paging-link"
+                            style={
+                                selected === 'paging-1' ? selectedStyling : {}
+                            }
                             onClick={handlePageSelect}
                         >
                             01 ___
@@ -99,6 +109,9 @@ export default function Popular() {
                         <span
                             id="paging-2"
                             className="popular-paging-link"
+                            style={
+                                selected === 'paging-2' ? selectedStyling : {}
+                            }
                             onClick={handlePageSelect}
                         >
                             02 ___
@@ -106,6 +119,9 @@ export default function Popular() {
                         <span
                             id="paging-3"
                             className="popular-paging-link"
+                            style={
+                                selected === 'paging-3' ? selectedStyling : {}
+                            }
                             onClick={handlePageSelect}
                         >
                             03 ___

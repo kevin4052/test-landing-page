@@ -14,13 +14,11 @@ export default function Hero() {
             </Col>
             <Col className="hero-col2">
                 <div>
-                    <p>ORGANIC TEA</p>
+                    <p>ORGANIC TEA _________</p>
                 </div>
                 <div>
                     <h2 className="hero-col2-type">SPARKLING.TEA</h2>
-                </div>
-                <div>
-                    <h2 className="hero-col2-title">KOMBUCHA</h2>
+                    <h3 className="hero-col2-title">KOMBUCHA</h3>
                 </div>
                 <div>
                     <p>
@@ -33,6 +31,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <h4>$ 89.99</h4>
+                    <p>___________________</p>
                 </div>
                 <div>
                     <Button>BUY NOW</Button>

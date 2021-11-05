@@ -87,7 +87,7 @@ export default function Footer() {
                 </Row>
                 <Row>
                     <Col className="footer-copyright">
-                        Copyright Kombucha. All rights reserved
+                        © Copyright Kombucha. All rights reserved
                     </Col>
                 </Row>
             </Col>

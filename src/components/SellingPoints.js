@@ -18,30 +18,30 @@ export default function SellingPoints() {
                         </p>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col className="selling-points-icons">
                             <Image src={badge} alt="Product Guarantee" />
                             <p>100% Genuien</p>
                             <p>Product Guarantee</p>
                         </Col>
-                        <Col>
+                        <Col className="selling-points-icons">
                             <Image src={truck} alt="Delivery" />
                             <p>Guaranted On Time</p>
                             <p>Delivery</p>
                         </Col>
-                        <Col>
+                        <Col className="selling-points-icons">
                             <Image src={returns} alt="Guarantee & Exchange" />
                             <p>100% Return</p>
                             <p>Guarantee & Exchange</p>
                         </Col>
-                        <Col>
+                        <Col className="selling-points-icons">
                             <Image src={support} alt="Customer Support" />
                             <p>24 x 7 Customer</p>
                             <p>Support</p>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="selling-points-btn">
                         <div>
-                            <Button>BUY NOW</Button>
+                            <Button>EXPLORE MORE</Button>
                         </div>
                     </Row>
                     <Row className="selling-points-title">

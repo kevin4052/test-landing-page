@@ -84,6 +84,10 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        margin-bottom: 3rem;
+        div {
+            margin: 1rem 0;
+        }
         &-type {
             font-size: 70px;
             color: #393939;
@@ -95,6 +99,9 @@ body {
         &-info {
             display: flex;
             justify-content: space-between;
+            h6 {
+                color: #ff6e51;
+            }
         }
     }
 }
@@ -102,10 +109,16 @@ body {
 .partners {
     padding-top: 7rem;
     padding-bottom: 9rem;
+    .col {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
 }
 
 .selling-points {
     &-title {
+        margin-bottom: 4rem;
         h1 {
             display: flex;
             justify-content: center;
@@ -120,6 +133,21 @@ body {
             align-items: center;
             text-align: center;
             padding: 0 10% 0;
+        }
+    }
+    &-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &-btn {
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
         }
     }
 }
@@ -158,9 +186,14 @@ body {
 }
 
 .popular {
+    margin-top: 7rem !important;
     &-paging {
         display: flex;
+        flex-direction: row;
         justify-content: flex-end;
+        &-link {
+            margin: 0 1rem;
+        }
         &-link:hover {
             cursor: pointer;
         }
@@ -174,18 +207,46 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
             transition: all 0.7s ease-in-out;
         }
     }
 }
 
+.metrics {
+    margin-top: 7rem !important;
+    background-color: #fafafa;
+    &-col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 4rem !important;
+        margin-bottom: 4rem !important;
+        flex-wrap: wrap;
+        div {
+            margin: 0 1rem;
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        img {
+            box-shadow: 4px 4px 11px lightgrey;
+        }
+    }
+}
+
 .testimonial {
+    margin-top: 7rem !important;
+
     &-title {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-bottom: 4rem !important;
         h1 {
             font-weight: bold;
         }
@@ -200,16 +261,28 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            div {
-                margin: 0.5rem;
-                padding: 1rem;
-                border-radius: 50%;
-                border: 1px solid black;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 32px;
+                font-weight: bold;
+                width: auto;
+                padding-bottom: 12px;
+                margin: 0 1rem;
+                border-radius: 50% !important;
+                background-color: transparent !important;
+                color: #545268;
+                border: none;
                 &:hover {
                     cursor: pointer;
+                    background-color: #545268 !important;
+                    color: white;
+                    box-shadow: 4px 4px 11px lightgrey;
                 }
                 &:focus {
-                    background-color: blue;
+                    border: none !important;
+                    box-shadow: none !important;
                 }
             }
         }
@@ -218,7 +291,8 @@ body {
         display: flex;
         flex-direction: column;
         width: 35vw !important;
-        margin: 1rem 1rem;
+        padding: 1rem 5rem !important;
+        transition: all 0.7s ease-in-out;
         &-head {
             display: flex;
             flex-direction: row;
@@ -258,6 +332,14 @@ body {
 
 .footer {
     margin-top: 5rem !important;
+    background-color: #fafafa;
+    padding: 4rem;
+    .col {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
     &-socials {
         &-title {
             font-size: 20px;
@@ -267,8 +349,8 @@ body {
             padding-left: 0 !important;
         }
         &-icons {
-            > div {
-                padding-left: 0;
+            .col {
+                margin: 0 1rem;
             }
             svg {
                 font-size: 1.5rem;
@@ -277,6 +359,9 @@ body {
         }
     }
     &-links {
+        .row {
+            padding-left: 5px;
+        }
         &-title {
             font-weight: bold;
         }
@@ -284,5 +369,22 @@ body {
     &-copyright {
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 3rem;
+        color: #b1b1b1;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        &-col2 {
+            &-type {
+                font-size: 46px;
+            }
+            &-title {
+                font-size: 60px;
+            }
+        }
     }
 }
